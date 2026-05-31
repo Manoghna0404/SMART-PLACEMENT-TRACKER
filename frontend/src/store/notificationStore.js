@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { io } from 'socket.io-client';
 import api from '../utils/api';
 
-const socketUrl = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api').replace('/api', '');
+const socketUrl = (import.meta.env.VITE_API_BASE_URL ).replace('/api', '');
 
 const useNotificationStore = create((set, get) => ({
   notifications: [],

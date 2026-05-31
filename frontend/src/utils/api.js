@@ -2,7 +2,7 @@ import axios from 'axios';
 import useAuthStore from '../store/authStore';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL ,
 });
 
 api.interceptors.request.use((config) => {
@@ -40,7 +40,7 @@ api.interceptors.response.use(
 export const getResumeUrl = (path) => {
   if (!path) return null;
   if (path.startsWith('http')) return path;
-  const base = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api').replace('/api', '');
+  const base = (import.meta.env.VITE_API_BASE_URL ).replace('/api', '');
   return `${base}${path}`;
 };
 

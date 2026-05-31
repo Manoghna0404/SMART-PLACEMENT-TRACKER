@@ -132,7 +132,7 @@ const ManageTests = () => {
       const topicNames = [];
 
 
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
       console.log('[MANAGE_TESTS] Checking question availability:', {
         apiUrl: `${apiBaseUrl}/tests/admin/check-availability`,
         topicNames,
@@ -215,7 +215,7 @@ const ManageTests = () => {
       setCreateBusy(true);
       const topicNames = selectedTopicSet.topicName ? [selectedTopicSet.topicName] : [];
 
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ;
       const createPayload = {
         ...form,
         duration: parseInt(form.duration, 10),
