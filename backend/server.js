@@ -35,12 +35,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const allowedOrigins = [
-  process.env.FRONTEND_URL || 'http://localhost:3000',
-  'http://localhost:3000',
-  'http://localhost:3001',
-  'http://localhost:5173',
-  'http://127.0.0.1:3000',
-  'http://127.0.0.1:5173',
+  process.env.FRONTEND_URL
 ];
 
 app.use(helmet());
